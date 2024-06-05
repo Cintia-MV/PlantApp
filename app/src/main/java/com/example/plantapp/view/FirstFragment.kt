@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.plantapp.PlantAppAdapter
 import com.example.plantapp.R
@@ -41,8 +42,8 @@ class FirstFragment : Fragment() {
 
         //Instancia del adaptador
         val adapter = PlantAppAdapter()
-        binding.reciclerView.adapter = adapter
-        binding.reciclerView.layoutManager = LinearLayoutManager(context)
+        binding.recyclerView.adapter = adapter
+        binding.recyclerView.layoutManager = GridLayoutManager(context, 2) //Para que muestre 2 card por cada fila
 
 
         viewModel.obtenerListaPlantas().observe(viewLifecycleOwner, Observer {

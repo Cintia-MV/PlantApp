@@ -60,7 +60,7 @@ class SecondFragment : Fragment() {
             binding.txtDescrPlant.text = "Descripción: ${it.descripcion}"
 
             //Enviar correo electrónico
-            binding.btMail.setOnClickListener {
+            binding.fab.setOnClickListener {
 
                 //Inicializo intent
                 val intent = Intent(Intent.ACTION_SEND)
